@@ -48,5 +48,19 @@ class AppBar extends StatelessWidget{
         end: Alignment.bottomRight
         )
       ),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Selamat Datang \ndi Inskalpedia',
+              style: Theme.of(context).textTheme.titleLarge,)
+            ],
+          )
+        ],
+
+
+      ),
     );
   }}
