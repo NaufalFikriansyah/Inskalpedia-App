@@ -13,11 +13,11 @@ class HomeScreen extends StatefulWidget{
 class _HomeScreenState extends State<HomeScreen>{
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion<SystemUiOverlayStyle>(
+    return const AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
          body: Column(
-           children: const [
+           children: [
              AppBar()
            ],
          ),
@@ -59,8 +59,6 @@ class AppBar extends StatelessWidget{
             ],
           )
         ],
-
-
       ),
     );
   }}
