@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:inskalpedia/widgets/search_field.dart';
 
 
 class HomeScreen extends StatefulWidget{
@@ -43,8 +44,8 @@ class AppBar extends StatelessWidget{
           bottomRight: Radius.circular(20),
         ),
         gradient: LinearGradient(colors: [
-            Color(0x00ffa13d),
-            Color(0x00ffdcb8),
+            Color(0xfff2aa6f),
+            Color(0xffe56400),
         ],
         begin: Alignment.topLeft,
         end: Alignment.bottomRight
@@ -57,9 +58,12 @@ class AppBar extends StatelessWidget{
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('Selamat Datang \ndi Inskalpedia',
-              style: Theme.of(context).textTheme.titleLarge,)
+              style: Theme.of(context).textTheme.titleLarge,),
+
             ],
-          )
+          ),
+          const SizedBox(height: 20,),
+          const SearchTextField(),
         ],
       ),
     );

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:inskalpedia/screens/home_screen.dart';
 //https://www.youtube.com/watch?v=yNrmluocNFw&ab_channel=DevWheels
-//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
+//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
+
+//Perbaiki AppBar()
 void main() {
   runApp(const MyApp());
 }
