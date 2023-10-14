@@ -2,7 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:inskalpedia/models/category.dart';
 import 'package:inskalpedia/widgets/search_field.dart';
+
+import '../widgets/category_card.dart';
 
 
 class HomeScreen extends StatefulWidget{
@@ -85,6 +88,22 @@ class Body extends StatelessWidget{
             ),
           ],
         ),
+        ),
+        GridView.builder(
+          shrinkWrap: true,
+          itemCount: categoryList.length,
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 0.8,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 24,
+        ),
+          itemBuilder: (context, index){
+          return CategoryCard(
+            category: categoryList[index],
+          );
+          },
         )
       ],
     );
