@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,7 +20,8 @@ class _HomeScreenState extends State<HomeScreen>{
       child: Scaffold(
          body: Column(
            children: [
-             AppBar()
+             AppBar(),
+             Body(),
            ],
          ),
       ),
@@ -27,8 +30,6 @@ class _HomeScreenState extends State<HomeScreen>{
 }
 class AppBar extends StatelessWidget{
   const AppBar({Key? key}): super(key:key);
-
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -62,3 +63,25 @@ class AppBar extends StatelessWidget{
       ),
     );
   }}
+
+class Body extends StatelessWidget{
+  const Body({Key? key}) : super(key:key);
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(padding: const EdgeInsets.only(top: 10, left: 10, right: 20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Pilih Kategori',
+            style: Theme.of(context).textTheme.bodyLarge,
+            ),
+          ],
+        ),
+        )
+      ],
+    );
+  }
+
+}
