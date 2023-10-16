@@ -1,8 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import '../constants/size.dart';
+import '../models/category.dart' as myCategory;
+
 class CategoryCard extends StatelessWidget{
-  final Category category;
+  final myCategory.Category category;
   const CategoryCard({Key? key, required this.category}) : super(key: key);
 
   @override
@@ -25,7 +28,17 @@ class CategoryCard extends StatelessWidget{
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Align() //8:12
+            Align(
+              alignment: Alignment.topRight,
+              child: Image.asset(
+                category.thumbnail,
+                height: kCategoryCardImageSize,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(category.name),
           ],
         ),
       ),
