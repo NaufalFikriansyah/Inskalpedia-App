@@ -1,9 +1,11 @@
 class GeofCal{
+  String thumbnail;
   String namaAlat;
   String merkAlat;
   String tipeAlat;
 
   GeofCal({
+    required this.thumbnail,
     required this.namaAlat,
     required this.merkAlat,
     required this.tipeAlat,
@@ -11,7 +13,7 @@ class GeofCal{
 }
 
 List<GeofCal> kalibrasigeof = [
-  GeofCal(namaAlat: "Digitizer", merkAlat: "Taurus", tipeAlat: "-"),
-  GeofCal(namaAlat: "Digitizer", merkAlat: "Centaur", tipeAlat: "-"),
-  GeofCal(namaAlat: "Digitizer", merkAlat: "Guralph", tipeAlat: "-"),
+  GeofCal(thumbnail: 'assets/icons/calibrationicon.png', namaAlat: "Digitizer", merkAlat: "Taurus", tipeAlat: "-"),
+  GeofCal(thumbnail: 'assets/icons/calibrationicon.png', namaAlat: "Digitizer", merkAlat: "Centaur", tipeAlat: "-"),
+  GeofCal(thumbnail: 'assets/icons/calibrationicon.png', namaAlat: "Digitizer", merkAlat: "Guralph", tipeAlat: "-"),
 ];

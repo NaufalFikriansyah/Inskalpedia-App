@@ -4,9 +4,11 @@ import 'package:flutter/services.dart';
 
 import '../models/geof_cal.dart';
 import '../widgets/custom_icon_button.dart';
+import '../widgets/instrument_container.dart';
 
 class InstrumentsScreen extends StatefulWidget{
-  const InstrumentsScreen({Key? key}) : super(key:key);
+  final String title;
+  const InstrumentsScreen({Key? key, required this.title}) : super(key:key);
 
   @override
   State<InstrumentsScreen> createState() => _InstrumentsScreenState();
@@ -52,8 +54,8 @@ class _InstrumentsScreenState extends State<InstrumentsScreen>{
                 ),
                 Expanded(child: ListView.separated(
                     shrinkWrap: true,
-                    itemBuilder: (_,index){return InstrumentContainer( //11:35
-                      field: kalibrasigeof[index],
+                    itemBuilder: (_,index){return InstrumentsContainer( //11:35
+                      kalibrasigeof: kalibrasigeof[index],
                     );},
                     separatorBuilder: (context,_){return const SizedBox(height: 10);},
                     itemCount: kalibrasigeof.length))
