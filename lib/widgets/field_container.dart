@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../models/field.dart';
+import '../screens/instruments_screen.dart';
 
 class FieldContainer extends StatelessWidget{
   final Field field;
