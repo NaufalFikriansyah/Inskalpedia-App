@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../models/geof_cal.dart';
+import '../models/field.dart';
 import '../widgets/custom_icon_button.dart';
+import '../widgets/field_container.dart';
 
 class FieldScreen extends StatefulWidget{
   const FieldScreen({Key? key}) : super(key:key);
@@ -35,12 +36,13 @@ class _FieldScreenState extends State<FieldScreen>{
                           style: Theme.of(context).textTheme.displayMedium,
                         ),
                       ),
-                      Positioned(child: CustomIconButton(
-                        left: 0,
-                        child: const Icon(Icons.arrow_back),
-                        height: 35,
-                        width: 35,
-                        onTap: () => Navigator.pop(context)
+                      Positioned(
+                          left: 0,
+                          child: CustomIconButton(
+                              child: const Icon(Icons.arrow_back),
+                              height: 35,
+                              width: 35,
+                              onTap: () => Navigator.pop(context)
                       ))
                     ],
                   ),
@@ -51,10 +53,10 @@ class _FieldScreenState extends State<FieldScreen>{
                 Expanded(child: ListView.separated(
                     shrinkWrap: true,
                     itemBuilder: (_,index){return FieldContainer( //11:35
-                  field: kalibrasigeof[index],
-                )},
+                  field: fields[index],
+                );},
                     separatorBuilder: (context,_){return const SizedBox(height: 10);},
-                    itemCount: kalibrasigeof.length))
+                    itemCount: fields.length))
               ],
             ),
           ),
