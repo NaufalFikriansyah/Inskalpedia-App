@@ -3,9 +3,9 @@ import 'package:inskalpedia/screens/home_screen.dart';
 //https://www.youtube.com/watch?v=yNrmluocNFw&ab_channel=DevWheels
 //https://www.youtube.com/watch?v=w1rSkpGMJdk&t=47s
 
-//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
+//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
 
-//bikin instrument container
+//bikin SOP di geog_guralph dan tampilkan see more pada detail_card
 void main() {
   runApp(const MyApp());
 }
