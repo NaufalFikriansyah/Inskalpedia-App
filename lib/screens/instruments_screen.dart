@@ -41,10 +41,10 @@ class _InstrumentsScreenState extends State<InstrumentsScreen>{
                       Positioned(
                           left: 0,
                           child: CustomIconButton(
-                              child: const Icon(Icons.arrow_back),
                               height: 35,
                               width: 35,
-                              onTap: () => Navigator.pop(context)
+                              onTap: () => Navigator.pop(context),
+                              child: const Icon(Icons.arrow_back)
                           ))
                     ],
                   ),
