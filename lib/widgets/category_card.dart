@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:inskalpedia/screens/field_screen.dart';
 
 import '../constants/size.dart';
 import '../models/category.dart' as myCategory;
@@ -11,7 +12,7 @@ class CategoryCard extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return GestureDetector(
-      onTap: (){},
+      onTap: ()=> Navigator.push(context, MaterialPageRoute(builder:(context) => const FieldScreen())),
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
@@ -29,16 +30,16 @@ class CategoryCard extends StatelessWidget{
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Align(
-              alignment: Alignment.topRight,
+              alignment: Alignment.center,
               child: Image.asset(
                 category.thumbnail,
                 height: kCategoryCardImageSize,
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 30,
             ),
-            Text(category.name),
+            Text(category.name, textAlign: TextAlign.center,),
           ],
         ),
       ),
