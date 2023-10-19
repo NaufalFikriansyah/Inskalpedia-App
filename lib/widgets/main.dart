@@ -3,9 +3,9 @@ import 'package:inskalpedia/screens/home_screen.dart';
 //https://www.youtube.com/watch?v=yNrmluocNFw&ab_channel=DevWheels
 //https://www.youtube.com/watch?v=I-WVHYiJjT4&ab_channel=FlutterMapp
 
-//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
+//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
 
-//bikin SOP di geog_guralph dan tampilkan see more pada detail_card
+//expanded panel di detail_card belum sempurna, data di geof_guralph belum terbaca
 void main() {
   runApp(const MyApp());
 }
