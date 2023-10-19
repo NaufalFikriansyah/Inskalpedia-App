@@ -1,10 +1,12 @@
 class GeofGuralph{
   String judul;
   String isi;
+  bool isExpanded;
 
   GeofGuralph({
     required this.judul,
     required this.isi,
+    this.isExpanded = false,
 
   });
 }

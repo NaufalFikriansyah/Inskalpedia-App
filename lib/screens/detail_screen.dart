@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:inskalpedia/widgets/custom_icon_button.dart';
+import 'package:inskalpedia/widgets/detail_card.dart';
 
 class DetailScreen extends StatefulWidget{
   final String title;
@@ -41,7 +42,9 @@ class _DetailScreenState extends State<DetailScreen>{
                       )) //14.07
                 ],
               ),
-            )],
+            ),
+              const DetailCard(),
+            ],
           ),
         ),
 
