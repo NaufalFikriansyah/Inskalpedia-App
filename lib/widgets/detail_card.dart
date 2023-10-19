@@ -12,11 +12,11 @@ class DetailCard extends StatefulWidget{
 }
 
 class _DetailCardState extends State<DetailCard> {
-  final List<GeofGuralph> _list = List<GeofGuralph>.generate(10,
+  final List<GeofGuralph> _list = List<GeofGuralph>.generate(6, //ganti 6 sebagai counts data
   (int index){
     return GeofGuralph(
-    judul: '$index', isi: '$index',
-
+    judul: 'Pastikan Semua Alat Tersedia',
+      isi: 'Pastikan ada: Digitizer Guralph, kabel ethernet, kabel GPS, kabel power, power supply 12VDC untuk digitizer guralph, kabel sensor, converter + adaptr 12VDC, inverter',
     );
   }
   );
@@ -31,12 +31,16 @@ class _DetailCardState extends State<DetailCard> {
             _list[index].isExpanded = !isExpanded;
           });
         },
-        children: _list.map<ExpansionPanel>((GeofGuralph kalibrasigeofGuralph){
+        children: _list.map<ExpansionPanel>((GeofGuralph geofGuralph){
           return ExpansionPanel(
             headerBuilder: (BuildContext context, bool isExpanded){
               return ListTile(
-                title: Text(kalibrasigeofGuralph.judul),);},
-            body: ListTile(title: Text(kalibrasigeofGuralph.isi),),
+                title: Text(geofGuralph.judul),);},
+            body: ListTile(
+              title: Text(geofGuralph.isi
+              ),
+            ),
+            isExpanded: geofGuralph.isExpanded,
           );
         }).toList(),
       ),
