@@ -3,20 +3,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../models/geof/geof_guralph.dart';
 
-
 class DetailCard extends StatefulWidget{
   const DetailCard({Key? key}):super(key:key);
-
   @override
   State<DetailCard> createState() => _DetailCardState();
 }
 
 class _DetailCardState extends State<DetailCard> {
-  final List<GeofGuralph> _list = List<GeofGuralph>.generate(6, //ganti 6 sebagai counts data
-  (int index){
-    return GeofGuralph(
-    judul: 'Pastikan Semua Alat Tersedia',
-      isi: 'Pastikan ada: Digitizer Guralph, kabel ethernet, kabel GPS, kabel power, power supply 12VDC untuk digitizer guralph, kabel sensor, converter + adaptr 12VDC, inverter',
+  final List<GeofGuralph> _list = List<GeofGuralph>.generate(kalibrasigeofGuralph.length, //length of data
+  (int index){final GeofGuralph geofGuralph = kalibrasigeofGuralph[index];
+    //if alat A return alat A. variable == geof guralph
+  return GeofGuralph(
+    judul: geofGuralph.judul,
+    isi: geofGuralph.isi, //isi
     );
   }
   );
@@ -35,7 +34,7 @@ class _DetailCardState extends State<DetailCard> {
           return ExpansionPanel(
             headerBuilder: (BuildContext context, bool isExpanded){
               return ListTile(
-                title: Text(geofGuralph.judul),);},
+                title: Text(geofGuralph.judul, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),);},
             body: ListTile(
               title: Text(geofGuralph.isi
               ),
