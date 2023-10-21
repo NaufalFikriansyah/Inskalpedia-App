@@ -13,7 +13,6 @@ class MetCal{
 }
 
 List<MetCal> kalibrasiMeteo = [
-  MetCal(thumbnail: 'assets/icons/meteo.png', namaAlat: "AWOS", merkAlat: "AllWeather", tipeAlat: "Kategori III"),
-  MetCal(thumbnail: 'assets/icons/meteo.png', namaAlat: "AWS", merkAlat: "Vaisala", tipeAlat: "-"),
-  MetCal(thumbnail: 'assets/icons/meteo.png', namaAlat: "ARG", merkAlat: "Vaisala", tipeAlat: "-"),
+  MetCal(thumbnail: 'assets/icons/meteo.png', namaAlat: "Alat A", merkAlat: "Merk A", tipeAlat: "Tipe A"),
+  MetCal(thumbnail: 'assets/icons/meteo.png', namaAlat: "Alat B", merkAlat: "Merk B", tipeAlat: "Tipe B"),
 ];

@@ -1,18 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:inskalpedia/models/geof/geof_cal.dart';
+import '../../models/klimat/klim_cal.dart';
+import '../../screens/detail_screen.dart';
 
-import '../screens/detail_screen.dart';
-
-class InstrumentsContainer extends StatelessWidget{
-  final GeofCal kalibrasigeof;
-  const InstrumentsContainer({Key? key, required this.kalibrasigeof}):super(key:key);
+class KlimInstrumentsContainer extends StatelessWidget{
+  final KlimCal kalibrasiklim;
+  const KlimInstrumentsContainer({Key? key, required this.kalibrasiklim}):super(key:key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => DetailScreen(
-        title: kalibrasigeof.namaAlat,
+        title: kalibrasiklim.namaAlat,
       ))),
       child: Container(
         decoration: BoxDecoration(
@@ -26,7 +25,7 @@ class InstrumentsContainer extends StatelessWidget{
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image.asset(
-                kalibrasigeof.thumbnail,
+                kalibrasiklim.thumbnail,
                 height: 60,
               ),
             ),
@@ -35,7 +34,7 @@ class InstrumentsContainer extends StatelessWidget{
             ),
             Expanded(child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text(kalibrasigeof.namaAlat)],
+              children: [Text(kalibrasiklim.namaAlat)],
             ))
           ],
         ),

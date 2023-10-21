@@ -2,19 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../models/geof/geof_cal.dart';
-import '../widgets/custom_icon_button.dart';
-import '../widgets/instrument_container.dart';
+import '../../models/geof/geof_cal.dart';
+import '../../widgets/custom_icon_button.dart';
+import '../../widgets/geof/geof_instrument_container.dart';
 
-class InstrumentsScreen extends StatefulWidget{
+class GeofInstrumentsScreen extends StatefulWidget{
   final String title;
-  const InstrumentsScreen({Key? key, required this.title}) : super(key:key);
+  const GeofInstrumentsScreen({Key? key, required this.title}) : super(key:key);
 
   @override
-  State<InstrumentsScreen> createState() => _InstrumentsScreenState();
+  State<GeofInstrumentsScreen> createState() => _GeofInstrumentsScreenState();
 }
 
-class _InstrumentsScreenState extends State<InstrumentsScreen>{
+class _GeofInstrumentsScreenState extends State<GeofInstrumentsScreen>{
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -34,7 +34,7 @@ class _InstrumentsScreenState extends State<InstrumentsScreen>{
                     children: [
                       Align(
                         child: Text(
-                          'Geofisika',
+                          'Instrumentasi Geofisika',
                           style: Theme.of(context).textTheme.displayMedium,
                         ),
                       ),
@@ -54,7 +54,7 @@ class _InstrumentsScreenState extends State<InstrumentsScreen>{
                 ),
                 Expanded(child: ListView.separated(
                     shrinkWrap: true,
-                    itemBuilder: (_,index){return InstrumentsContainer( //11:35
+                    itemBuilder: (_,index){return GeofInstrumentsContainer( //11:35
                       kalibrasigeof: kalibrasigeof[index],
                     );},
                     separatorBuilder: (context,_){return const SizedBox(height: 10);},

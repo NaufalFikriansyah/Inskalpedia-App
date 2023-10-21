@@ -101,7 +101,7 @@ class Body extends StatelessWidget{
         ),
           itemBuilder: (context, index){
           return CategoryCard(
-            category: categoryList[index],
+            categoryList: categoryList[index],
           );
           },
         )

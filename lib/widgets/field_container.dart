@@ -5,14 +5,18 @@ import 'package:flutter/material.dart';
 import 'package:inskalpedia/screens/meteo/met_instrument_screen.dart';
 
 import '../models/field.dart';
-import '../screens/instruments_screen.dart';
+import '../screens/geof/geof_instument_screen.dart';
+import '../screens/ins/ins_instrument_screen.dart';
+import '../screens/klimat/klim_instrument_screen.dart';
 
 class FieldContainer extends StatelessWidget{
   final Field field;
   const FieldContainer({Key? key, required this.field}):super(key:key);
 
+
   @override
   Widget build(BuildContext context) {
+
     return GestureDetector(
       onTap: () {
         switch (field.name){
@@ -20,13 +24,13 @@ class FieldContainer extends StatelessWidget{
             Navigator.push(context, MaterialPageRoute(builder: (context) => MetInstrumentsScreen(title: field.name)));
             break;
           case "Klimatologi":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => InstrumentsScreen(title: field.name)));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => KlimInstrumentsScreen(title: field.name)));
             break;
           case "Geofisika":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => InstrumentsScreen(title: field.name)));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => GeofInstrumentsScreen(title: field.name)));
             break;
           case "Instrumentasi":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => InstrumentsScreen(title: field.name)));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => InsInstrumentsScreen(title: field.name)));
             break;
         }
       },

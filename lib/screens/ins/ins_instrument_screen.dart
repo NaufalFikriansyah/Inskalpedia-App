@@ -1,24 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:inskalpedia/models/category.dart';
-import '../models/field.dart';
-import '../widgets/custom_icon_button.dart';
-import '../widgets/field_container.dart';
+import '../../models/ins/ins_cal.dart';
+import '../../widgets/custom_icon_button.dart';
+import '../../widgets/ins/ins_instrument_container.dart';
 
 
-class FieldScreen extends StatefulWidget{
-  final Category categoryList;
-  const FieldScreen({Key? key, required this.categoryList}) : super(key:key);
+class InsInstrumentsScreen extends StatefulWidget{
+  final String title;
+  const InsInstrumentsScreen({Key? key, required this.title}) : super(key:key);
 
   @override
-  State<FieldScreen> createState() => _FieldScreenState();
+  State<InsInstrumentsScreen> createState() => _InsInstrumentsScreenState();
 }
 
-class _FieldScreenState extends State<FieldScreen>{
-
+class _InsInstrumentsScreenState extends State<InsInstrumentsScreen>{
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
@@ -36,7 +34,7 @@ class _FieldScreenState extends State<FieldScreen>{
                     children: [
                       Align(
                         child: Text(
-                          widget.categoryList.name,
+                          'Instrumentasi',
                           style: Theme.of(context).textTheme.displayMedium,
                         ),
                       ),
@@ -47,7 +45,7 @@ class _FieldScreenState extends State<FieldScreen>{
                               width: 35,
                               onTap: () => Navigator.pop(context),
                               child: const Icon(Icons.arrow_back)
-                      ))
+                          ))
                     ],
                   ),
                 ),
@@ -56,12 +54,11 @@ class _FieldScreenState extends State<FieldScreen>{
                 ),
                 Expanded(child: ListView.separated(
                     shrinkWrap: true,
-                    itemBuilder: (_,index){return FieldContainer( //11:35
-                  field: fields[index]
-
-                );},
+                    itemBuilder: (_,index){return InsInstrumentsContainer( //11:35
+                      kalibrasiIns: kalibrasiIns[index],
+                    );},
                     separatorBuilder: (context,_){return const SizedBox(height: 10);},
-                    itemCount: fields.length))
+                    itemCount: kalibrasiIns.length))
               ],
             ),
           ),
@@ -70,4 +67,5 @@ class _FieldScreenState extends State<FieldScreen>{
 
     );
   }
+
 }

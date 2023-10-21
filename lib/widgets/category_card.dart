@@ -6,13 +6,13 @@ import '../constants/size.dart';
 import '../models/category.dart' as myCategory;
 
 class CategoryCard extends StatelessWidget{
-  final myCategory.Category category;
-  const CategoryCard({Key? key, required this.category}) : super(key: key);
+  final myCategory.Category categoryList;
+  const CategoryCard({Key? key, required this.categoryList}) : super(key: key);
 
   @override
   Widget build(BuildContext context){
     return GestureDetector(
-      onTap: ()=> Navigator.push(context, MaterialPageRoute(builder:(context) => const FieldScreen())),
+      onTap: ()=> Navigator.push(context, MaterialPageRoute(builder:(context) => FieldScreen(categoryList: categoryList,))),
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
@@ -32,14 +32,14 @@ class CategoryCard extends StatelessWidget{
             Align(
               alignment: Alignment.center,
               child: Image.asset(
-                category.thumbnail,
+                categoryList.thumbnail,
                 height: kCategoryCardImageSize,
               ),
             ),
             const SizedBox(
               height: 30,
             ),
-            Text(category.name, textAlign: TextAlign.center,),
+            Text(categoryList.name, textAlign: TextAlign.center,),
           ],
         ),
       ),
