@@ -13,7 +13,7 @@ class GeofCal{
 }
 
 List<GeofCal> kalibrasigeof = [
-  GeofCal(thumbnail: 'assets/icons/calibrationicon.png', namaAlat: "Digitizer", merkAlat: "Taurus", tipeAlat: "-"),
-  GeofCal(thumbnail: 'assets/icons/calibrationicon.png', namaAlat: "Digitizer", merkAlat: "Centaur", tipeAlat: "-"),
-  GeofCal(thumbnail: 'assets/icons/calibrationicon.png', namaAlat: "Digitizer", merkAlat: "Guralph", tipeAlat: "-"),
+  GeofCal(thumbnail: 'assets/icons/geof.png', namaAlat: "Digitizer", merkAlat: "Taurus", tipeAlat: "-"),
+  GeofCal(thumbnail: 'assets/icons/geof.png', namaAlat: "Digitizer", merkAlat: "Centaur", tipeAlat: "-"),
+  GeofCal(thumbnail: 'assets/icons/geof.png', namaAlat: "Digitizer", merkAlat: "Guralph", tipeAlat: "-"),
 ];

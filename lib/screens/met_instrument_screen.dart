@@ -1,20 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../models/field.dart';
+import '../models/met_cal.dart';
 import '../widgets/custom_icon_button.dart';
-import '../widgets/field_container.dart';
+import '../widgets/met_instrument_container.dart';
 
-class FieldScreen extends StatefulWidget{
-  const FieldScreen({Key? key}) : super(key:key);
+class MetInstrumentsScreen extends StatefulWidget{
+  final String title;
+  const MetInstrumentsScreen({Key? key, required this.title}) : super(key:key);
 
   @override
-  State<FieldScreen> createState() => _FieldScreenState();
+  State<MetInstrumentsScreen> createState() => _MetInstrumentsScreenState();
 }
 
-class _FieldScreenState extends State<FieldScreen>{
+class _MetInstrumentsScreenState extends State<MetInstrumentsScreen>{
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
@@ -32,7 +33,7 @@ class _FieldScreenState extends State<FieldScreen>{
                     children: [
                       Align(
                         child: Text(
-                          'Calibration',
+                          'Instrumentasi Meteorologi',
                           style: Theme.of(context).textTheme.displayMedium,
                         ),
                       ),
@@ -43,7 +44,7 @@ class _FieldScreenState extends State<FieldScreen>{
                               width: 35,
                               onTap: () => Navigator.pop(context),
                               child: const Icon(Icons.arrow_back)
-                      ))
+                          ))
                     ],
                   ),
                 ),
@@ -52,11 +53,11 @@ class _FieldScreenState extends State<FieldScreen>{
                 ),
                 Expanded(child: ListView.separated(
                     shrinkWrap: true,
-                    itemBuilder: (_,index){return FieldContainer( //11:35
-                  field: fields[index],
-                );},
+                    itemBuilder: (_,index){return MetInstrumentsContainer( //11:35
+                      kalibrasiMeteo: kalibrasiMeteo[index],
+                    );},
                     separatorBuilder: (context,_){return const SizedBox(height: 10);},
-                    itemCount: fields.length))
+                    itemCount: kalibrasiMeteo.length))
               ],
             ),
           ),
@@ -65,4 +66,5 @@ class _FieldScreenState extends State<FieldScreen>{
 
     );
   }
+
 }
