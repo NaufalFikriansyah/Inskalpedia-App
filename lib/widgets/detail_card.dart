@@ -1,7 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../models/geof_guralph.dart';
+import '../models/geof/geof_guralph.dart';
 
 
 class DetailCard extends StatefulWidget{

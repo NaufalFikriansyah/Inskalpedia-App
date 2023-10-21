@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../models/met_cal.dart';
-import '../widgets/custom_icon_button.dart';
-import '../widgets/met_instrument_container.dart';
+import '../../models/meteo/met_cal.dart';
+import '../../widgets/custom_icon_button.dart';
+import '../../widgets/meteo/met_instrument_container.dart';
 
 class MetInstrumentsScreen extends StatefulWidget{
   final String title;

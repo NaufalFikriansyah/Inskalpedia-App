@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../models/geof_cal.dart';
+import '../models/geof/geof_cal.dart';
 import '../widgets/custom_icon_button.dart';
 import '../widgets/instrument_container.dart';
 

@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:inskalpedia/screens/met_instrument_screen.dart';
+import 'package:inskalpedia/screens/meteo/met_instrument_screen.dart';
 
 import '../models/field.dart';
 import '../screens/instruments_screen.dart';

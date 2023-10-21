@@ -3,7 +3,7 @@ import 'package:inskalpedia/screens/home_screen.dart';
 //https://www.youtube.com/watch?v=yNrmluocNFw&ab_channel=DevWheels
 //https://www.youtube.com/watch?v=I-WVHYiJjT4&ab_channel=FlutterMapp
 
-//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
+//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
 
 //expanded panel di detail_card belum sempurna, data di geof_guralph belum terbaca
 void main() {
