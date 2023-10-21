@@ -37,9 +37,10 @@ class CategoryCard extends StatelessWidget{
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 9,
             ),
-            Text(categoryList.name, textAlign: TextAlign.center,),
+            Align(alignment: Alignment.center,
+            child: Text(categoryList.name, textAlign: TextAlign.center,),)
           ],
         ),
       ),

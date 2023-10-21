@@ -22,24 +22,25 @@ class _HomeScreenState extends State<HomeScreen>{
     return const AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
-         body: Column(
-           children: [
-             AppBar(),
-             Body(),
+         body: SingleChildScrollView(
+            child: Column(
+                    children: [
+                       AppBar(),
+                        Body(),
            ],
          ),
       ),
+    )
     );
   }
 }
 class AppBar extends StatelessWidget{
-  //2:37
   const AppBar({Key? key}): super(key:key);
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
-      height: 200,
+      height: 180,
       width: double.infinity,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -97,7 +98,7 @@ class Body extends StatelessWidget{
           crossAxisCount: 2,
           childAspectRatio: 0.8,
           crossAxisSpacing: 20,
-          mainAxisSpacing: 24,
+          mainAxisSpacing: 20,
         ),
           itemBuilder: (context, index){
           return CategoryCard(

@@ -12,42 +12,46 @@ class DetailScreen extends StatefulWidget{
   State<DetailScreen> createState() => _DetailScreenState();
 }
 
-class _DetailScreenState extends State<DetailScreen>{
+class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.dark,
+      value: SystemUiOverlayStyle.dark,
       child: Scaffold(
         backgroundColor: Colors.white,
-        body: SafeArea(child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [IntrinsicHeight(
-              child: Stack(
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Align(
-                    child: Text(
-                      'Digitizer Guralph',
-                      style: Theme.of(context).textTheme.displayMedium,
+                  IntrinsicHeight(
+                    child: Stack(
+                      children: [
+                        Align(
+                          child: Text(
+                            'Digitizer Guralph',
+                            style: Theme.of(context).textTheme.displayMedium,
+                          ),
+                        ),
+                        Positioned(
+                          left: 0,
+                          child: CustomIconButton(
+                            height: 35,
+                            width: 35,
+                            onTap: () => Navigator.pop(context),
+                            child: const Icon(Icons.arrow_back),
+                          ),
+                        )
+                      ],
                     ),
                   ),
-                  Positioned(
-                      left: 0,
-                      child: CustomIconButton(
-                        height: 35,
-                        width: 35,
-                        onTap: () => Navigator.pop(context),
-                        child: const Icon(Icons.arrow_back),
-                      )) //14.07
+                  const DetailCard(),
                 ],
               ),
             ),
-              const DetailCard(),
-            ],
           ),
-        ),
-
         ),
       ),
     );
