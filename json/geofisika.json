@@ -1,0 +1,18 @@
+[
+  {
+    "id" : 0,
+    "nama_alat" : "Guralph",
+    "tipe_alat" : "",
+    "gambar_alat": "assets/icons/geof.png",
+    "cara_kalibrasi": [
+    {"judul": "1. Pastikan semua peralatan tersedia", "isi": "Siapkan peralatan berikut: \n1. Digitizer Guralph \n2. Kabel Ethernet \n3. Kabel GPS Guralph \n4. Kabel power guralph \n5. Power Supply 12 VDC untuk digitizer guralph \n6. Kabel sensor \n7. Converter \n8. Adaptor power 12 VDC untuk converter \n9.Inverter", "img": ""},
+    {"judul": "2. Sambungkan laptop dengan dengan digitizer", "isi": "Sambungkan laptop dengan dengan digitizer seismograph yang terinstall pada site dengan mengatur IP ethernet laptop sama dengan digitizer.", "img": ""},
+    {"judul": "3. Skrinsut status sensor dan waveformnya", "isi": "", "img": ""},
+    {"judul": "4. Perhatikan massa seismometer", "isi": "Apabila tidak centre maka lakukan centring mass terlebih dahulu, pastikan skrinsut keadaan awal massa dan keadaan setelah centring", "img": ""},
+    {"judul": "5. Shutdown digitizer", "isi": "", "img": ""},
+    {"judul": "6. Lepas kabel power", "isi": "Jika digitizer sudah mati, lepas kabel power, kemudian lepas kabel sensornya", "img": ""},
+    {"judul": "7. Rangkai peralatan seperti gambar dibawah ", "isi": "Rangkai peralatan seperti gambar dibawah (kabel sensor yang masuk ke digitizer menggunakan port A) dengan tidak menghubungkan power terlebih dahulu", "img": ""}
+    ],
+    "cara_perawatan" : []
+  }
+]

@@ -1,10 +1,8 @@
-//import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:inskalpedia/models/category.dart';
 import 'package:inskalpedia/widgets/search_field.dart';
-
 import '../widgets/category_card.dart';
 
 
@@ -17,20 +15,22 @@ class HomeScreen extends StatefulWidget{
 }
 
 class _HomeScreenState extends State<HomeScreen>{
+  List<dynamic> peralatan  = [];
   @override
   Widget build(BuildContext context) {
     return const AnnotatedRegion<SystemUiOverlayStyle>(
-      value: SystemUiOverlayStyle.light,
-      child: Scaffold(
-         body: SingleChildScrollView(
+        value: SystemUiOverlayStyle.light,
+        child: Scaffold(
+          body: SingleChildScrollView(
             child: Column(
-                    children: [
-                       AppBar(),
-                        Body(),
-           ],
-         ),
-      ),
-    )
+              children: [
+                AppBar(),
+                Body(),
+              ],
+            ),
+          ),
+          // floatingActionButton: FloatingActionButton(onPressed: fetchPeralatan,child: Icon(Icons.refresh),),
+        )
     );
   }
 }

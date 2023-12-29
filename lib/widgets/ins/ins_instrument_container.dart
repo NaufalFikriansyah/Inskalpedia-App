@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:inskalpedia/models/geof/geof_cal.dart';
 import 'package:inskalpedia/models/ins/ins_cal.dart';
 
 import '../../screens/detail_screen.dart';

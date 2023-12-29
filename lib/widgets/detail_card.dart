@@ -34,7 +34,7 @@ class _DetailCardState extends State<DetailCard> {
           return ExpansionPanel(
             headerBuilder: (BuildContext context, bool isExpanded){
               return ListTile(
-                title: Text(geofGuralph.judul, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),);},
+                title: Text(geofGuralph.judul, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),);},
             body: ListTile(
               title: Text(geofGuralph.isi
               ),

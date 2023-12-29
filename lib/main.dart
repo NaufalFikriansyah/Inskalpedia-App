@@ -1,10 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:inskalpedia/screens/home_screen.dart';
-//https://www.youtube.com/watch?v=yNrmluocNFw&ab_channel=DevWheels
-//https://www.youtube.com/watch?v=I-WVHYiJjT4&ab_channel=FlutterMapp
 
-//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
+//container cocokkan dengan sebelumnya
 
+//https://www.youtube.com/watch?v=ExPFnu8Dm40&list=PLXbYsh3rUPSzuLcZsIkpDmftSQbFmUq9x
+//Gabisa nampilin list data di geof screen
 //expanded panel di detail_card belum sempurna, data di geof_guralph belum terbaca
 void main() {
   runApp(const MyApp());
@@ -45,4 +46,5 @@ class MyApp extends StatelessWidget {
       home: const HomeScreen(),
     );
   }
+
 }
